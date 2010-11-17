@@ -1,0 +1,16 @@
+K 10
+svn:ignore
+V 86
+*.pyc
+*~
+settings_local.py
+*.wpr
+*.kpf
+Thumbs.db
+nbproject
+graphviz
+.temp.swp
+.l.swp
+
+
+END
