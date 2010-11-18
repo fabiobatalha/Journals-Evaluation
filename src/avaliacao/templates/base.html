@@ -23,47 +23,17 @@
     </head>
     <body>
         <div class="{% block container_class %}container wide{% endblock %}">
-            <div class="barra_MSaude">
-                <div class="barra1000">
-                    <div class="minSaude">
-                        <a href="http://www.saude.gov.br" title="Ministério da Saúde" target="_blank"><span>Ministério da Saúde</span></a>
-                    </div>
-                    <div class="form">
-                        <form method="post" action="/" id="govform" name="govform">
-                            <select name="opcoes" class="pr">
-                                <option>Destaques do governo</option>
-                                <option value="http://www.brasil.gov.br">Portal do Governo Federal</option>
-                                <option value="http://www.e.gov.br">Portal de Serviços do Governo</option>
-                                <option value="http://www.radiobras.gov.br">Portal da Agência de Notícias</option>
-                                <option value="http://www.previdenciasocial.gov.br">Reforma da Previdência</option>
-                                <option value="http://www.fomezero.gov.br">Programa Fome Zero</option>
-                            </select>
-                        </form>
-                        <script type="text/javascript">
-                            $('form#govform select option[value]').click(function(){
-                                window.open(this.value);
-                            });
-                        </script>
-                    </div>
-                    <div class="brasilGov">
-                        <a href="http://www.brasil.gov.br" title="Governo Federal" target="_blank"><span>Governo Federal</span></a>
-                    </div>
-                </div>
-            </div>
             <div class="top">
                 <div class="banner">
                     <div class="institutions">
                         <ul>
                             <li>
-                                <a href="http://www.fiocruz.br/cgi/cgilua.exe/sys/start.htm?tpl=home" title="Fundação Oswaldo Cruz" target="_blank" class="logo" id="FIOCRUZ"><span>FioCruz</span></a>
-                            </li>
-                            <li>
-                                <a href="http://regional.bvsalud.org/php/index.php?lang=pt" title="Centro Latino-Americano e do Caribe de Informação em Ciências da Saúde" target="_blank" class="logo" id="BIREME"><span>BIREME</span></a>
+                                <a href="http://www.scielo.org/" title="SciELO Brasil" target="_blank" class="logo" id="SCIELO"><span>SciELO</span></a>
                             </li>
                         </ul>
                     </div>
                     <div class="identification">
-                        <h1><a href="#">{% trans 'Registro Brasileiro de Ensaios Clínicos' %}</a></h1>
+                        <h1><a href="#">{% trans 'Avaliação SciELO' %}</a></h1>
                     </div>
                 </div>
                 {% block login %}
