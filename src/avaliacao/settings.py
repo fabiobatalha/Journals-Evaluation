@@ -104,6 +104,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     #'django.contrib.staticfiles',
     'tickets',
+    'registration',  # django-registration package
     )
 
 TEMPLATE_CONTEXT_PROCESSORS =(
@@ -112,6 +113,8 @@ TEMPLATE_CONTEXT_PROCESSORS =(
     'django.core.context_processors.csrf',
     'django.core.context_processors.media',
 )
+
+#AUTH_PROFILE_MODULE = "reviewapp.UserProfile"
 
 #################################################################
 ### BEGIN SciELO Avaliacao customization settings
