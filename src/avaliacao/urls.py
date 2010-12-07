@@ -1,6 +1,7 @@
 from django.conf.urls.defaults import *
 
 import utilities
+from avaliacao.tickets.views import index
 
 from django.contrib import admin
 admin.autodiscover()
@@ -16,6 +17,10 @@ urlpatterns = patterns('',
     # Tickets application
     url(r'^ticket/', include('avaliacao.tickets.urls')),
 
+    # django-registration views
+    url(r'^accounts/', include('registration.backends.default.urls')),
+
+    url(r'^$', index, name="avaliacao.ticket.index"),
 
 )
 

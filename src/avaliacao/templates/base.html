@@ -89,12 +89,12 @@
                                     <input type="password" id="id_password" class="textEntry" name="password" onblur="this.className = 'textEntry';" onfocus="this.className = 'textEntry textEntryFocus';" />
                                 </div>
                                 <input type="submit" class="submit" value="{% trans 'login' %}" />
-                                <input type="hidden" value="reviewapp.dashboard" name="next" />
+                                <input type="hidden" value="{{ next }}" name="next" />
                             </form>
                         </div>
                         <div class="loginOption">
                             <ul>
-                                <li><a href="{% url reviewapp.password_reset %}" title="{% trans 'Forgot password?' %}">{% trans 'Forgot password?' %}</a></li>
+                                <li><a href="" title="{% trans 'Forgot password?' %}">{% trans 'Forgot password?' %}</a></li>
                                 <li><a href="/accounts/register" title="{% trans 'create an account to submit trial records' %}">{% trans 'Register' %}</a></li>
                             </ul>
                         </div>
