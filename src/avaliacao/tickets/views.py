@@ -12,8 +12,14 @@ from django.contrib.auth.decorators import login_required
 from avaliacao.tickets.models import Ticket, Followup
 import choices
 
-@login_required
+
 def index(request):
+    t = loader.get_template('tickets/home_tickets.html')
+    c = RequestContext(request)
+    return HttpResponse(t.render(c))
+
+@login_required
+def user_index(request):
     user_tickets = Ticket.objects.filter(creator=request.user)[:5]
     user_open_tickets  = (i.opened_tickets() for i in Ticket.objects.all())
     user_close_tickets = (i.closed_tickets() for i in Ticket.objects.all())

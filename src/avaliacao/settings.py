@@ -84,7 +84,8 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'avaliacao.urls'
-#LOGIN_REDIRECT_URL = '/accounts/dashboard/'
+LOGIN_REDIRECT_URL = '/ticket/list/'
+LOGIN_REDIRECT_URL = '/'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
