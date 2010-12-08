@@ -78,14 +78,14 @@ blockquote {
 }
 .identification {
     position: absolute;
-    top: 4em;
+    /*top: 4em;*/
     left: 0;
 }
 .identification H1 {
     margin: 0px 0px 0px 40px;
     clear: both;
     padding-top: 12px;
-    font-size: 200%;
+    font-size: 250%;
     font-weight: normal;
 }
 
@@ -118,7 +118,7 @@ blockquote {
 }
 .topRight {
     float: right;
-    width: 440px;
+    width: 480px;
     padding: 0px;
     margin-right: 10px;
     background: url(../images/login_bg.jpg) no-repeat;
@@ -223,7 +223,7 @@ blockquote {
 
 /* TOP MENU */
 .topMenu {
-    float: left;
+    float: right;
     margin: 19px 70px 0px 8px;
 }
 .topMenu UL {
