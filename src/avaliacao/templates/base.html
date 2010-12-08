@@ -88,7 +88,7 @@
                                     <label for="id_password">{% trans 'Password' %}</label>
                                     <input type="password" id="id_password" class="textEntry" name="password" onblur="this.className = 'textEntry';" onfocus="this.className = 'textEntry textEntryFocus';" />
                                 </div>
-                                <input type="hidden" value="{{ next|default:'/ticket/home'}}" name="next" />
+                                <input type="hidden" value="{{ next|default:'/ticket'}}" name="next" />
                                 <input type="submit" class="submit" value="{% trans 'login' %}" />
                             </form>
                         </div>
@@ -120,10 +120,12 @@
             </div>
             {% block stepmenu_top %}{% endblock %}
             <div class="middle">
+                <div class="sideBar">
+                    {% block sidebar %}{% endblock %}
+                </div>
                 <div class="mainContent">
                     {% block body %}{% endblock %}
                 </div>
-                {% block sidebar %}{% endblock %}
                 <div class="spacer">&#160;</div>
             </div>
             <div id="footer">

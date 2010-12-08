@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 from django.views.generic.list_detail import object_detail, object_list
 from tickets.models import Ticket, Followup
-from tickets.views import index, new_iteration, reopen_ticket, resolve_ticket, close_ticket, open_ticket, waiting_acceptance, accept_ticket
+from tickets.views import *
 
 
 info_dict = {
@@ -9,7 +9,7 @@ info_dict = {
 }
 
 urlpatterns = patterns('',
-    url(r'^$', index, name="ticket.index"),
+    url(r'^$', user_index, name="ticket.user_index"),
     url(r'^list/$', object_list, info_dict, name="ticket.list"),
     url(r'^list_waiting/$', waiting_acceptance, name="ticket.waiting_acceptance"),
     url(r'^history/(?P<object_id>\d+)/$', object_detail, info_dict, name='ticket.history' ),

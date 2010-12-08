@@ -285,7 +285,7 @@ blockquote {
 }
 /* MIDDLE */
 .wide .middle {
-    width: 90%;
+    width: 100%;
 }
 .middle .leftCol, .middle .rightCol {
     float: left;
@@ -297,14 +297,26 @@ blockquote {
     width: 60%;
 }
 .middle {
-    width: 75%;
-    margin: 20px auto 0px auto;
+    margin: 10px auto 0px auto;
     min-height: 349px;
 }
+
+.sideBar {
+    float: left;
+    background-color: red;
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.sideBar .highlights ul{
+    margin: 0px;
+    padding: 0px;
+}
+
 .middle .mainContent {
     float: left;
-    width: 70%;
-    margin-right: 2em;
+    margin-right: 4em;
     padding-right: 2em;
     border-right: 1px solid #d7d7d7;
     min-height: 349px;
@@ -312,7 +324,6 @@ blockquote {
 
 .wide .middle .mainContent {
     border: none;
-    width: 100%;
     margin-right: 0em;
     padding-right: 0em;
 }

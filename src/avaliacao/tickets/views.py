@@ -8,12 +8,19 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django import forms
 from django.utils.translation import ugettext as _
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 
 from avaliacao.tickets.models import Ticket, Followup
 import choices
 
 
 def index(request):
+    t = loader.get_template('tickets/home_tickets.html')
+    c = RequestContext(request)
+    return HttpResponse(t.render(c))
+
+def user_logout(request):
+    logout(request)
     t = loader.get_template('tickets/home_tickets.html')
     c = RequestContext(request)
     return HttpResponse(t.render(c))
